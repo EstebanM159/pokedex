@@ -1,3 +1,10 @@
 <p>pokemon works!</p>
+<div *ngIf="pokemons$ | async">
+  <div *ngFor="let  pokemon of pokemons$ | async">
+    <p>
+      {{pokemon.name}}
+    </p>
+    <img [src]="pokemon.sprites" alt="">
+    </div>
+</div>
 
-<h1>{{ pokemon.name }}</h1>

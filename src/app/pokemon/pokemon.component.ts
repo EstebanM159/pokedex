@@ -1,21 +1,19 @@
 import { Component } from '@angular/core';
 import { ConsultaApiService } from '../consulta-api.service';
-import { PokemonClass } from '../models/pokemonClass';
+import { PokemonApiResults } from '../models/pokemonApi';
+import { Observable } from 'rxjs';
+
+
 @Component({
   selector: 'app-pokemon',
   templateUrl: './pokemon.component.html',
   styleUrls: ['./pokemon.component.css']
 })
 export class PokemonComponent {
-constructor(private pokemonService: ConsultaApiService) { }
-  pokemon:any;
-  ngOnInit() {
-    this.pokemonService.getPokemonById(1).subscribe(
-      ( data) => {
-        // Aquí puedes trabajar con los datos del Pokémon obtenidos de la API
-        this.pokemon =data;
-        console.log(this.pokemon);
-      }
-    );
+  pokemons$:Observable<PokemonApiResults[]>
+  constructor(consultaServicio:ConsultaApiService) {
+    this.pokemons$ = consultaServicio.getPokemons();
+    console.log(this.pokemons$)
   }
+
 }
