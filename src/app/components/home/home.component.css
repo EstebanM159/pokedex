@@ -1,0 +1,23 @@
+.menu-start-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin: 0;
+}
+.menu-start{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.menu-start-container a{
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.card{
+  background-color: var(--tipoAgua);
+  padding: 2rem;
+}

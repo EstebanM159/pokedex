@@ -10,12 +10,9 @@ export class ConsultaApiService {
   url = 'https://pokeapi.co/api/v2/pokemon';
   constructor(private http: HttpClient) { }
 
-  getPokemons() :Observable<PokemonApiResults[]>{
-  return this.http.get<PokemonApi>(this.url)
-    .pipe(map((apiResult)=>apiResult.results));
+
+   getPokemonById(id: number): Observable<any> {
+   return this.http.get<any>(`${this.url}/${id}`);
   }
 
-
-
-  // }
 }

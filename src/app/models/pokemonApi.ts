@@ -7,6 +7,7 @@ export interface PokemonApi{
 export interface PokemonApiResults{
   id:number,
   name:string,
+  url:string,
   height:number,
   order:number,
   weight:number,

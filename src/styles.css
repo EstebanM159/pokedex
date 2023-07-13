@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+:root {
+  --tipoElectrico: #FBC02D;
+  --tipoFuego: #FF4500;
+  --tipoAgua: #4FC3F7;
+  --tipoPlanta: #7CB342;
+  --tipoTierra: #795548;
+  --tipoFantasma: #7B1FA2;
+  --fuentePrincipal: 'Staatliches', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--primario);
+  line-height: 1.5rem;
+}
+
+p {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blanco);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+h1 {
+  margin: 2rem 0;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: var(--secundario);
+  font-family: var(--fuentePrincipal);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 90%;
+}

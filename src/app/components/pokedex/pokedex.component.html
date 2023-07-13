@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div class="pokemon">
+
+  <div *ngFor="let pokemon of pokemons">
+    <app-pokemon [name]="pokemon.name" [img]="pokemon.sprites.front_default"></app-pokemon>
+  </div>
+</div>
+
