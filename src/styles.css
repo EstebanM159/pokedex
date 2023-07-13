@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
 :root {
   --tipoElectrico: #FBC02D;
   --tipoFuego: #FF4500;
@@ -9,7 +9,10 @@
   --tipoPlanta: #7CB342;
   --tipoTierra: #795548;
   --tipoFantasma: #7B1FA2;
-  --fuentePrincipal: 'Staatliches', cursive;
+  --bgHome: #2C3333;
+  --bgHeader:#E7371C;
+  --fuenteTitulares: 'Bangers',cursive;
+  --fuenteCuerpo:'Roboto',sans-serif;
 }
 
 * {

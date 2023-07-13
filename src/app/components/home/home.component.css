@@ -1,14 +1,16 @@
+
 .menu-start-container{
+  background-color: var(--bgHome);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 90vh;
   margin: 0;
 }
 .menu-start{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: .8rem;
 }
 .menu-start-container a{
   text-align: center;
@@ -20,4 +22,5 @@
 .card{
   background-color: var(--tipoAgua);
   padding: 2rem;
+  border-radius: 1rem;
 }

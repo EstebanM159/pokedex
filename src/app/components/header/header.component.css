@@ -2,5 +2,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: blue;
+  background-color: var(--bgHeader);
+}
+.nav a{
+  font-family: var(--fuenteTitulares);
+  color: black;
+}
+
+.nav a:hover{
+  text-shadow: 1px 1px 4px rgba(128, 0, 0, 1);;
 }
