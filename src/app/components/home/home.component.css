@@ -13,14 +13,34 @@
     gap: .8rem;
 }
 .menu-start-container a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 2rem;
+  font-family: var(--fuenteCuerpo);
 }
 
 .card{
-  background-color: var(--tipoAgua);
+  background-color: var(--bgCards);
   padding: 2rem;
   border-radius: 1rem;
 }
+.transUp {
+  transition: .5s, color .10s;
+  -webkit-transition: .5s, color .10s;
+  -moz-transition: .5s, color .10s;
+}
+
+.transUp:hover {
+  transform: translatey(-20px);
+  -webkit-transform: translatey(-20px);
+  -moz-transform: translatey(-20px);
+}
+.pokedex-icon{
+  width: 10rem;
+  height: 10rem;
+}
+

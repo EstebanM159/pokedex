@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
   --tipoElectrico: #FBC02D;
   --tipoFuego: #FF4500;
@@ -9,10 +9,13 @@
   --tipoPlanta: #7CB342;
   --tipoTierra: #795548;
   --tipoFantasma: #7B1FA2;
-  --bgHome: #2C3333;
-  --bgHeader:#E7371C;
+  --letras: #FFF9DE;
+  --bgHome: #FFD3B0;
+  --bgCards:#A6D0DD;
+  --bgHeader:#FF6969;
   --fuenteTitulares: 'Bangers',cursive;
-  --fuenteCuerpo:'Roboto',sans-serif;
+  --fuenteCuerpo:'Poppins',
+    sans-serif;
 }
 
 * {
@@ -38,12 +41,13 @@ body {
 
 p {
   font-size: 1.8rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--blanco);
+  font-family: var(--fuenteCuerpo);
+  color: var(--letras);
 }
 
 a {
   text-decoration: none;
+  color: var(--letras);
 }
 
 
@@ -56,7 +60,6 @@ h1,
 h2,
 h3 {
   text-align: center;
-  color: var(--secundario);
   font-family: var(--fuentePrincipal);
 }
 

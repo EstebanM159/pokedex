@@ -1,8 +1,13 @@
+
 .nav{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
   background-color: var(--bgHeader);
+}
+.nav-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
 }
 .nav a{
   font-family: var(--fuenteTitulares);
@@ -11,4 +16,14 @@
 
 .nav a:hover{
   text-shadow: 1px 1px 4px rgba(128, 0, 0, 1);;
+}
+.img-pok{
+  width: 5rem;
+  height: 5rem;
+}
+
+.bars{
+  width: 3rem;
+  height: 3rem;
+
 }
