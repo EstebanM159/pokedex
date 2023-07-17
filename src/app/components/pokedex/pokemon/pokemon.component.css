@@ -1,0 +1,25 @@
+h1{
+  font-size: 2rem;
+}
+
+.card-pokemon{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgCards);
+  border-radius: 2rem;
+}
+.info{
+  display: flex;
+  flex-direction: row;
+  gap:2rem;
+
+}
+
+.info p{
+  background-color: blue;
+    padding: .7rem;
+    border-radius: 1rem;
+}

@@ -13,6 +13,7 @@
   --bgHome: #FFD3B0;
   --bgCards:#A6D0DD;
   --bgHeader:#FF6969;
+  --bgPokedex:#C4D7B2;
   --fuenteTitulares: 'Bangers',cursive;
   --fuenteCuerpo:'Poppins',
     sans-serif;
@@ -47,7 +48,7 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--letras);
+  color: #000;
 }
 
 
@@ -60,7 +61,8 @@ h1,
 h2,
 h3 {
   text-align: center;
-  font-family: var(--fuentePrincipal);
+  font-family: var(--fuenteCuerpo);
+  text-transform: uppercase;
 }
 
 h1 {

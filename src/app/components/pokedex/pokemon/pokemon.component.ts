@@ -10,4 +10,5 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PokemonComponent{
 @Input() name: string="";
 @Input() img: string="";
+  @Input()type!: any[];
 }

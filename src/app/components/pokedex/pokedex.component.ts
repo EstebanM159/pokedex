@@ -11,17 +11,17 @@ pokemons:Array<any> = new Array;
 
   ngOnInit() {
     this.getPokemons();
+
   }
 
   getPokemons(){
-    for (let i = 1; i < 50; i++) {
+    for (let i = 1; i < 10; i++) {
       this.consultaServicio.getPokemonById(i).subscribe(
         data => {
           this.pokemons.push(data);
         }
         )
-
-        console.log(this.pokemons);
       }
+    }
+
   }
-}
