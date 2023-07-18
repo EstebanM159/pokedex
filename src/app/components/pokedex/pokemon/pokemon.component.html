@@ -5,7 +5,7 @@
       <img [src]="img" alt="">
       <div class="info-tipos">
         <div  class="tipos" *ngFor="let item of tipo">
-          <p [ngClass]="clase">{{item.type.name}}</p>
+          <p [ngClass]="color(item.type.name)">{{item.type.name}}</p>
         </div>
       </div>
     </div>
