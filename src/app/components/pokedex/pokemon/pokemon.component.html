@@ -3,8 +3,10 @@
     <div class="card-pokemon">
       <h1>{{name}}</h1>
       <img [src]="img" alt="">
-      <div class="info" *ngFor="let item of type">
-        <p>{{item.type["type"]}}</p>
+      <div class="info-tipos">
+        <div class="tipos" *ngFor="let item of type">
+          <p>{{item.type.name}}</p>
+        </div>
       </div>
     </div>
   </a>

@@ -8,6 +8,14 @@ export interface Resultado{
   name:string,
   url:string
 }
+export interface Tipos{
+  cant:InfoTipos
+
+}
+export interface InfoTipos{
+  slot:1,
+  type:Resultado
+}
 // export interface PokemonApi{
 //   count:number,
 //   next:string,

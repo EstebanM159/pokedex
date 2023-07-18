@@ -7,8 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './pokemon.component.html',
   styleUrls: ['./pokemon.component.css']
 })
-export class PokemonComponent{
+export class PokemonComponent {
 @Input() name: string="";
 @Input() img: string="";
-  @Input()type!: any[];
+  @Input()type : any[]=[];
+
+
 }

@@ -11,15 +11,19 @@ h1{
   background-color: var(--bgCards);
   border-radius: 2rem;
 }
-.info{
+.card-pokemon img{
+  width: 80%;
+  image-rendering: pixelated;
+}
+.info-tipos{
   display: flex;
   flex-direction: row;
-  gap:2rem;
-
+  gap:1rem;
 }
 
-.info p{
-  background-color: blue;
+.tipos p{
     padding: .7rem;
     border-radius: 1rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
 }
