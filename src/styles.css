@@ -3,12 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
-  --tipoElectrico: #FBC02D;
-  --tipoFuego: #FF4500;
-  --tipoAgua: #4FC3F7;
-  --tipoPlanta: #7CB342;
-  --tipoTierra: #795548;
-  --tipoFantasma: #7B1FA2;
+  --tipoNormal:#A8A878;
+  --tipoFuego:#F08030;
+  --tipoFlighting:#C03028;
+  --tipoWater:#6890F0;
+  --tipoFlying:#A890F0;
+  --tipoGrass:#78C850;
+  --tipoPoisson:#A040A0;
+  --tipoElectric:#F8D030;
   --letras: #FFF9DE;
   --bgHome: #FFD3B0;
   --bgCards:#A6D0DD;
