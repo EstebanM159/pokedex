@@ -9,15 +9,9 @@ import { Pokemon } from 'src/app/models/pokemon';
   styleUrls: ['./pokemon.component.css']
 })
 export class PokemonComponent implements OnChanges {
-  ngOnChanges(){
-    this.extraerInfo();
-    this.getById();
-  }
   constructor ( private consultaServicio:ConsultaApiService){}
   @Input() data?:Resultado;
-  // @Input() name: string="";
-  // @Input() img: string="";
-  @Input() pokemon?:Pokemon;
+  unPokemon?: Pokemon;
   id:string="0";
   public clase:string='';
   color(tipo:string):string{
@@ -52,6 +46,10 @@ export class PokemonComponent implements OnChanges {
     }
     return clase;
   }
+  ngOnChanges(){
+    this.extraerInfo();
+    this.getById();
+  }
   extraerInfo(){
     if(this.data){
       this.id = this.data.url.substring(34,this.data.url.length-1);
@@ -59,7 +57,8 @@ export class PokemonComponent implements OnChanges {
   }
   getById(){
     this.consultaServicio.getPokemonById(this.id).subscribe(info=>{
-      console.log(info);
+      this.unPokemon = info;
+
     })
     //tengo que acceder a los tipos desde aca!!!!
 

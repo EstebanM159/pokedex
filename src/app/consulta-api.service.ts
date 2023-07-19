@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Data } from './models/pokeapi';
+import { Pokemon } from './models/pokemon';
 
 
 @Injectable({
@@ -15,6 +16,6 @@ export class ConsultaApiService {
     return this.http.get<Data>(this.urlByPage);
   }
   getPokemonById(id:string){
-     return this.http.get<Data>(`https://pokeapi.co/api/v2/pokemon/${id}`);
+     return this.http.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${id}`);
   }
 }
