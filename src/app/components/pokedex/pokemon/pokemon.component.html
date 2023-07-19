@@ -1,16 +1,16 @@
 <div class="pokemon-single">
   <a routerLink="#">
     <div class="card-pokemon">
-      <h1>{{name}}</h1>
-      <img [src]="img" alt="">
-      <div class="info-tipos">
-        <div  class="tipos" *ngFor="let item of tipo">
-          <p [ngClass]="color(item.type.name)">{{item.type.name}}</p>
+      <h1 *ngIf="data">{{data.name}}</h1>
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id}}.png" alt="">
+      <!-- <div class="info-tipos">
+        <div  class="tipos" *ngFor="let tipo of pokemon?.types">
+          <p [ngClass]="color(tipo.type.name)">{{tipo.type.name}}</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </a>
-<!-- importar los estilos predeterminados -->
+ <!-- importar los estilos predeterminados  -->
 
 </div>
 

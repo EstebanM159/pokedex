@@ -1,32 +1,31 @@
 import { Component } from '@angular/core';
 import { ConsultaApiService } from 'src/app/consulta-api.service';
-import { Tipos } from 'src/app/models/pokemonApi';
+
+import { Data, Resultado } from 'src/app/models/pokeapi';
 @Component({
   selector: 'app-pokedex',
   templateUrl: './pokedex.component.html',
   styleUrls: ['./pokedex.component.css']
 })
 export class PokedexComponent {
-pokemons:Array<any> = new Array;
-listaTipos:Tipos[] =[];
+  pokemons:Resultado[]=[];
+
   constructor(private consultaServicio:ConsultaApiService) {}
 
   ngOnInit() {
-    this.getPokemons();
+    this.cargarLista();
 
   }
 
-  getPokemons(){
-    for (let i = 1; i < 10; i++) {
-      this.consultaServicio.getPokemonById(i).subscribe(
-        data => {
-          // console.log(data.types);
-          this.pokemons.push(data);
-        }
-        )
+  cargarLista(){
+      this.consultaServicio.getPokemonByPage().subscribe(info=>{
+          this.pokemons  = info.results
+       } )
       }
 
-    }
+}
 
-  }
+
+
+
 

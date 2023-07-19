@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {map} from 'rxjs/operators';
-// import { PokemonApi, PokemonApiResults,PokemonApiSprites } from './models/pokemonApi';
 import { Observable } from 'rxjs';
+import { Data } from './models/pokeapi';
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class ConsultaApiService {
-  url = 'https://pokeapi.co/api/v2/pokemon';
+  urlByPage = 'https://pokeapi.co/api/v2/pokemon/?limit=20&offset=20';
   constructor(private http: HttpClient) { }
 
-
-   getPokemonById(id: number): Observable<any> {
-   return this.http.get<any>(`${this.url}/${id}`);
+  getPokemonByPage():Observable<Data>{
+    return this.http.get<Data>(this.urlByPage);
   }
-
+  getPokemonById(id:string){
+     return this.http.get<Data>(`https://pokeapi.co/api/v2/pokemon/${id}`);
+  }
 }
