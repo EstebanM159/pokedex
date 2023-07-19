@@ -4,6 +4,18 @@
   gap: 2rem;
   padding: 3rem 0;
 }
+@media (min-width: 768px) {
+  .pokemon-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1050px) {
+  .pokemon-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .bg-pokedex{
 
   background-color: var(--bgPokedex);

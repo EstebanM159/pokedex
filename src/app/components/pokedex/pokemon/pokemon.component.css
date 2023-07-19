@@ -21,62 +21,72 @@ h1{
   gap:1rem;
 }
 
-
+.info {
+  padding: .7rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
 
 .bg-normal{
   background-color:#A8A878 ;
-  padding: .7rem;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    font-size: 1.5rem;
+
 }
 .bg-fuego {
   background-color: #F08030;
-  padding: .7rem;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    font-size: 1.5rem;
+
 }
 .bg-flighting{
   background-color: #C03028;
-  padding: .7rem;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    font-size: 1.5rem;
+
 }
 .bg-water{
   background-color:#6890F0 ;
-  padding: .7rem;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    font-size: 1.5rem;
+
 }
 .bg-flying {
   background-color:#A890F0 ;
-  padding: .7rem;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    font-size: 1.5rem;
+
 }
 .bg-grass {
   background-color: #78C850;
-  padding: .7rem;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    font-size: 1.5rem;
+
 }
 .bg-poisson {
   background-color: #A040A0;
-  padding: .7rem;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    font-size: 1.5rem;
+
 }
 .bg-electric {
   background-color: #F8D030;
-  padding: .7rem;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    font-size: 1.5rem;
+}
+.bg-ground{
+  background-color: var(--tipoGround);
+}
+.bg-pyschic{
+  background-color: var(--tipoPyschic);
+}
+.bg-rock{
+  background-color: var(--tipoRock);
+}
+.bg-ice{
+  background-color: var(--tipoIce);
+}
+.bg-bug{
+  background-color: var(--tipoBug);
+}
+.bg-dragon{
+  background-color: var(--tipoDragon);
+}
+.bg-ghost{
+  background-color: var(--tipoGhost);
+}
+.bg-dark{
+  background-color: var(--tipoDark);
+}
+.bg-steel{
+  background-color: var(--tipoSteel);
+}
+.bg-fairy{
+  background-color: var(--tipoFairy);
 }
 

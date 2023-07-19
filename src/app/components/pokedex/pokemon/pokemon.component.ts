@@ -17,29 +17,59 @@ export class PokemonComponent implements OnChanges {
   color(tipo:string):string{
     let clase:string="";
     switch (tipo) {
+      case 'normal':
+        clase = 'bg-normal info';
+      break;
       case 'fire':
-        clase = 'bg-fuego';
+        clase = 'bg-fuego info';
+        break;
+        case 'flighting':
+          clase = 'bg-flighting info';
+        break;
+        case 'water':
+          clase = 'bg-water info';
+        break;
+        case 'flying':
+          clase = 'bg-flying info';
         break;
       case 'grass':
-        clase = 'bg-grass';
-      break;
-      case 'flying':
-        clase = 'bg-flying';
-      break;
-      case 'electric':
-        clase = 'bg-electric';
+        clase = 'bg-grass info';
       break;
       case 'poison':
-        clase = 'bg-poisson';
+        clase = 'bg-poisson info';
       break;
-      case 'water':
-        clase = 'bg-water';
+      case 'electric':
+        clase = 'bg-electric info';
       break;
-      case 'flighting':
-        clase = 'bg-flighting';
+      case 'ground':
+        clase = 'bg-ground info';
       break;
-      case 'normal':
-        clase = 'bg-normal';
+      case 'pyschic':
+        clase = 'bg-pyschic info';
+      break;
+      case 'rock':
+        clase = 'bg-rock info';
+      break;
+      case 'ice':
+        clase = 'bg-ice info';
+      break;
+      case 'bug':
+        clase = 'bg-bug info';
+      break;
+      case 'dragon':
+        clase = 'bg-dragon info';
+      break;
+      case 'ghost':
+        clase = 'bg-ghost info';
+      break;
+      case 'dark':
+        clase = 'bg-dark info';
+      break;
+      case 'steel':
+        clase = 'bg-steel info';
+      break;
+      case 'fairy':
+        clase = 'bg-fairy info';
       break;
       default:
         break;
