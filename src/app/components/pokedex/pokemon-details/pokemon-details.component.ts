@@ -26,6 +26,9 @@ export class PokemonDetailsComponent implements OnInit{
     this.consultaServicio.getPokemonById(this.id).subscribe(info=>{
       console.log(info);
       this.unPokemon = info;
+      // unPokemon.stats trae un array con cosas y un objeto
+      // para poder acceder a ese objeto cree la variable stats de tipo interface stat[]
+      // y aca abajo le asigne this.unPokemon.stats y con eso pude acceder a las propiedades en el html
       this.stats=this.unPokemon.stats;
       console.log(this.stats)
     })
