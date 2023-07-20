@@ -1,0 +1,120 @@
+.menu-start-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+  background-color: var(--bgPokedex);
+}
+/* Mostrar los datos y agregarle estilos */
+.card-pokemon {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgCards);
+  border-radius: 2rem;
+  height: 80%;
+  width: 80%;
+}
+h1 {
+  font-size: 2rem;
+}
+
+.card-pokemon img {
+  width: 80%;
+  image-rendering: pixelated;
+}
+
+.info-tipos {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.info {
+  padding: .7rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.bg-normal {
+  background-color: #A8A878;
+
+}
+
+.bg-fuego {
+  background-color: #F08030;
+
+}
+
+.bg-flighting {
+  background-color: #C03028;
+
+}
+
+.bg-water {
+  background-color: #6890F0;
+
+}
+
+.bg-flying {
+  background-color: #A890F0;
+
+}
+
+.bg-grass {
+  background-color: #78C850;
+
+}
+
+.bg-poisson {
+  background-color: #A040A0;
+
+}
+
+.bg-electric {
+  background-color: #F8D030;
+}
+
+.bg-ground {
+  background-color: var(--tipoGround);
+}
+
+.bg-pyschic {
+  background-color: var(--tipoPyschic);
+}
+
+.bg-rock {
+  background-color: var(--tipoRock);
+}
+
+.bg-ice {
+  background-color: var(--tipoIce);
+}
+
+.bg-bug {
+  background-color: var(--tipoBug);
+}
+
+.bg-dragon {
+  background-color: var(--tipoDragon);
+}
+
+.bg-ghost {
+  background-color: var(--tipoGhost);
+}
+
+.bg-dark {
+  background-color: var(--tipoDark);
+}
+
+.bg-steel {
+  background-color: var(--tipoSteel);
+}
+
+.bg-fairy {
+  background-color: var(--tipoFairy);
+}

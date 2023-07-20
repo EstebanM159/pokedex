@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { ConsultaApiService } from 'src/app/consulta-api.service';
-import { InfoTipos, Tipos,Resultado } from 'src/app/models/pokeapi';
+import { Resultado } from 'src/app/models/pokeapi';
 import { Pokemon } from 'src/app/models/pokemon';
 
 @Component({
@@ -14,6 +14,10 @@ export class PokemonComponent implements OnChanges {
   unPokemon?: Pokemon;
   id:string="0";
   public clase:string='';
+  ngOnChanges(){
+    this.extraerInfo();
+    this.getById();
+  }
   color(tipo:string):string{
     let clase:string="";
     switch (tipo) {
@@ -76,21 +80,18 @@ export class PokemonComponent implements OnChanges {
     }
     return clase;
   }
-  ngOnChanges(){
-    this.extraerInfo();
-    this.getById();
-  }
+  //con esto saco la id
   extraerInfo(){
     if(this.data){
       this.id = this.data.url.substring(34,this.data.url.length-1);
     }
   }
+  //Sirve para sacar los atributos de cada pokemon
   getById(){
     this.consultaServicio.getPokemonById(this.id).subscribe(info=>{
       this.unPokemon = info;
-
     })
-    //tengo que acceder a los tipos desde aca!!!!
+
 
   }
 
