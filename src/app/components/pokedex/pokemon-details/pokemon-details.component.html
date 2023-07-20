@@ -1,11 +1,27 @@
 <app-header></app-header>
 <div class="menu-start-container">
       <div class="card-pokemon">
-        <h1 *ngIf="data">{{data.name}}</h1>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id}}.png" alt="">
+        <div class="name-img">
+          <h1>{{unPokemon?.name}}</h1>
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id}}.png" alt="">
+        </div>
         <div class="info-tipos">
+          <p class="titulo">Types: </p>
           <div class="tipos" *ngFor="let tipo of unPokemon?.types">
             <p [ngClass]="color(tipo.type.name)">{{tipo.type.name}}</p>
+          </div>
+        </div>
+        <div class="info-tipos">
+          <p class="titulo">Abilities:</p>
+          <div *ngFor="let abilitie of unPokemon?.abilities">
+              <p class="info">{{abilitie.ability.name}}</p>
+          </div>
+        </div>
+        <h2>Stats</h2>
+        <!-- ARREGLAR LAS STATS -->
+        <div class=" stats">
+          <div *ngFor="let stat of stats">
+            <p class="info"><span class="titulo">{{stat.stat.name}}:</span>{{stat.base_stat}}</p>
           </div>
         </div>
       </div>

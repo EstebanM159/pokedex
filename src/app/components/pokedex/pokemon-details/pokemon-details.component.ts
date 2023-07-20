@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ConsultaApiService } from 'src/app/consulta-api.service';
 import { Resultado } from 'src/app/models/pokeapi';
 import { Pokemon } from 'src/app/models/pokemon';
+import { Stat } from 'src/app/models/pokemon';
 @Component({
   selector: 'app-pokemon-details',
   templateUrl: './pokemon-details.component.html',
@@ -10,6 +11,7 @@ import { Pokemon } from 'src/app/models/pokemon';
 })
 export class PokemonDetailsComponent implements OnInit{
   @Input() data?:Resultado;
+  stats ?:Stat[];
   unPokemon?:Pokemon;
   id:string="0";
   constructor(private consultaServicio:ConsultaApiService, private rutaActiva:ActivatedRoute){
@@ -22,7 +24,10 @@ export class PokemonDetailsComponent implements OnInit{
 //muestra la id pero no los datos de la misma!!!!!!!!!!!!
   getById(){
     this.consultaServicio.getPokemonById(this.id).subscribe(info=>{
+      console.log(info);
       this.unPokemon = info;
+      this.stats=this.unPokemon.stats;
+      console.log(this.stats)
     })
   }
   color(tipo:string):string{

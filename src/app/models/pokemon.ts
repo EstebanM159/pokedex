@@ -306,7 +306,10 @@ export interface Sprites {
 export interface Stat {
   base_stat: number;
   effort: number;
-  stat: Stat;
+  stat: {
+    name:string,
+    url:string
+  };
 }
 
 export interface Type {

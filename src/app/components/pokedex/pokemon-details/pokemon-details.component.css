@@ -7,27 +7,36 @@
   background-color: var(--bgPokedex);
 }
 /* Mostrar los datos y agregarle estilos */
-.card-pokemon {
-  padding: 2rem;
+.name-img{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+.card-pokemon {
+  padding: 2rem;
   background-color: var(--bgCards);
   border-radius: 2rem;
-  height: 80%;
-  width: 80%;
+  width: 90%;
+}
+.card-pokemon .info-tipos{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 h1 {
+  font-size: 3rem;
+}
+h2{
   font-size: 2rem;
 }
-
 .card-pokemon img {
-  width: 80%;
+  width: 50%;
   image-rendering: pixelated;
 }
 
 .info-tipos {
+  margin: 2rem 0;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -39,7 +48,14 @@ h1 {
   text-transform: uppercase;
   font-size: 1.5rem;
 }
+.titulo{
+  color:#000;
+}
 
+.stats{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .bg-normal {
   background-color: #A8A878;
 
