@@ -9,18 +9,17 @@ import { Resultado } from 'src/app/models/pokeapi';
 export class PokedexComponent {
   pokemons:Resultado[]=[];
   constructor(private consultaServicio:ConsultaApiService) {}
-
+  pagina:number=1;
   ngOnInit() {
     this.cargarLista();
-
   }
 
   cargarLista(){
-      this.consultaServicio.getPokemonByPage().subscribe(info=>{
+      this.consultaServicio.getPokemonByPage(this.pagina).subscribe(info=>{
           this.pokemons  = info.results;
+          this.pagina++;
        } )
       }
-
 }
 
 

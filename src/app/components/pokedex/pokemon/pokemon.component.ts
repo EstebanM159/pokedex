@@ -92,7 +92,7 @@ export class PokemonComponent implements OnChanges {
       this.unPokemon = info;
     })
 
-
   }
+
 
 }

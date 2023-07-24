@@ -9,11 +9,12 @@ import { Pokemon } from './models/pokemon';
   providedIn: 'root'
 })
 export class ConsultaApiService {
-  urlByPage = 'https://pokeapi.co/api/v2/pokemon/?limit=20&offset=20';
+
   constructor(private http: HttpClient) { }
 
-  getPokemonByPage():Observable<Data>{
-    return this.http.get<Data>(this.urlByPage);
+  getPokemonByPage(page:number,size:number=40):Observable<Data>{
+    const offset= size*(page-1);
+    return this.http.get<Data>(`https://pokeapi.co/api/v2/pokemon/?limit=${size}&offset=${offset}`);
   }
   getPokemonById(id:string){
      return this.http.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${id}`);
