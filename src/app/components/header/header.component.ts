@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  public pokemonName:string="";
+   buscar(e:any){
+    this.pokemonName = e.target.value;
 
+  }
+  onClick(){
+    console.log(this.pokemonName)
+  }
 }
+
+

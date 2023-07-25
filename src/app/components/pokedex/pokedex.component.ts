@@ -10,16 +10,19 @@ export class PokedexComponent {
   pokemons:Resultado[]=[];
   constructor(private consultaServicio:ConsultaApiService) {}
   pagina:number=1;
+
   ngOnInit() {
     this.cargarLista();
   }
 
   cargarLista(){
-      this.consultaServicio.getPokemonByPage(this.pagina).subscribe(info=>{
-          this.pokemons  = info.results;
-          this.pagina++;
-       } )
-      }
+    this.consultaServicio.getPokemonByPage(this.pagina).subscribe(info=>{
+      this.pokemons  = info.results;
+      this.pagina++;
+    } )
+  }
+
+
 }
 
 
