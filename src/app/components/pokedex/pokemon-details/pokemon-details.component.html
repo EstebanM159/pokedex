@@ -22,13 +22,22 @@
           </div>
         </div>
         <h2>Stats</h2>
-        <!-- CENTRAR LOS STATS -->
-        <!-- INTENTAR OPTIMIZAR EL CODIGO -->
         <div class="stats-container">
           <div class="stats">
             <div *ngFor="let stat of stats"><!-- stats es la variable que cree en el ts para acceder a la promiedad stat.name -->
               <p class="info"><span class="titulo-span">{{stat.stat.name}}: </span><span class="base-stat">{{stat.base_stat}}</span></p>
             </div>
+          </div>
+        </div>
+        <div class="info-inlines">
+          <div class="info-inline">
+            <p><span class="titulo">Base experience:</span>{{unPokemon?.base_experience}}</p>
+          </div>
+          <div class="info-inline">
+            <p><span class="titulo">Height</span>{{unPokemon?.height}}</p>
+          </div>
+          <div class="info-inline">
+            <p><span class="titulo">Weight</span>{{unPokemon?.weight}}</p>
           </div>
         </div>
       </div>
