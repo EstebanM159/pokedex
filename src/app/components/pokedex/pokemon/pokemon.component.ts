@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input, OnChanges } from '@angular/core';
 import { ConsultaApiService } from 'src/app/consulta-api.service';
 import { Resultado } from 'src/app/models/pokeapi';
@@ -11,6 +12,7 @@ import { Pokemon } from 'src/app/models/pokemon';
 export class PokemonComponent implements OnChanges {
   constructor ( private consultaServicio:ConsultaApiService){}
   @Input() data?:Resultado;
+  errorMessage:string="";
   unPokemon?: Pokemon;
   id:string="0";
   public clase:string='';
@@ -90,7 +92,15 @@ export class PokemonComponent implements OnChanges {
   getById(){
     this.consultaServicio.getPokemonById(this.id).subscribe(info=>{
       this.unPokemon = info;
-    })
+    },
+     (error: HttpErrorResponse) => {
+            if (error.status === 404) {
+              this.errorMessage = 'No se encontró el Pokémon.';
+            } else {
+              this.errorMessage = 'Ocurrió un error. Inténtalo nuevamente más tarde.';
+            }
+          }
+        );
 
   }
 

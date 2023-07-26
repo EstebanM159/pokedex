@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Data } from './models/pokeapi';
 import { Pokemon } from './models/pokemon';
-
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +19,17 @@ export class ConsultaApiService {
   }
   getPokemonById(id:string){
      return this.http.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${id}`);
+  }
+  getPokemonByName(nombre:string){
+    return this.http.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
+    .pipe(
+        catchError((error: HttpErrorResponse) => {
+          if (error.status === 404) {
+            return throwError('No se encontró el Pokémon.');
+          } else {
+            return throwError('Ocurrió un error. Inténtalo nuevamente más tarde.');
+          }
+        })
+      );
   }
 }
