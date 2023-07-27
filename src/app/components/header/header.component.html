@@ -16,7 +16,8 @@
       </div>
   </div>
 </nav>
-<div *ngIf="pokemonBuscado" class=" bg-search">
+<!-- agregar transicion -->
+<div *ngIf="pokemonBuscado" ngClass="slide-bottom" class="bg-search">
   <a [routerLink]="['/pokemon-details',pokemonBuscado.id]" class="buscado-container contenedor">
     <p>
       {{pokemonBuscado.name}}
@@ -24,4 +25,4 @@
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemonBuscado.id}}.png" alt="">
   </a>
 </div>
-<h1 class="titulo" *ngIf="errorMessage">{{errorMessage}}</h1>
+<h1 class="error" ngClass="slide-bottom" *ngIf="errorMessage">{{errorMessage}}</h1>

@@ -1,5 +1,4 @@
 .nav {
-
   background-color: var(--bgHeader);
 }
 
@@ -82,4 +81,28 @@
 }
 .buscado-container img{
   width: 4rem;
+}
+.slide-bottom {
+  animation: slide-bottom 1s ease-in-out both;
+}
+@keyframes slide-bottom {
+  0% {
+     opacity:0;
+  }
+  25%{
+    opacity: .25;
+  }
+  50%{
+    opacity: .5;
+  }
+  75%{
+    opacity: .75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.error{
+  font-size: 1.5rem;
+  color: var(--bgHeader);
 }
