@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ConsultaApiService } from 'src/app/consulta-api.service';
+import { Pokemon } from 'src/app/models/pokemon';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,6 +10,7 @@ import { ConsultaApiService } from 'src/app/consulta-api.service';
 export class HeaderComponent {
 
   constructor (private consultaService : ConsultaApiService ){}
+  pokemonBuscado?:Pokemon;
  errorMessage: string = "";
   public pokemonName:string="";
   buscar(e:any){
@@ -17,8 +19,16 @@ export class HeaderComponent {
   }
   onClick(){
     this.consultaService.getPokemonByName(this.pokemonName).subscribe(data=>{
-      console.log(data)
-    })
+      this.pokemonBuscado=data
+      console.log(data);
+    }
+      ,
+      (error=> {if(error===404)
+        this.errorMessage = "No se encontro el pokemon"
+        return this.errorMessage;
+      }
+      )
+    )
   }
 }
 

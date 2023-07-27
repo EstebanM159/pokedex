@@ -92,15 +92,8 @@ export class PokemonComponent implements OnChanges {
   getById(){
     this.consultaServicio.getPokemonById(this.id).subscribe(info=>{
       this.unPokemon = info;
-    },
-     (error: HttpErrorResponse) => {
-            if (error.status === 404) {
-              this.errorMessage = 'No se encontró el Pokémon.';
-            } else {
-              this.errorMessage = 'Ocurrió un error. Inténtalo nuevamente más tarde.';
-            }
-          }
-        );
+    }
+    );
 
   }
 
