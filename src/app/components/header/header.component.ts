@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ConsultaApiService } from 'src/app/consulta-api.service';
 import { Pokemon } from 'src/app/models/pokemon';
+import { Input } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -10,7 +11,7 @@ import { Pokemon } from 'src/app/models/pokemon';
 export class HeaderComponent {
 
   constructor (private consultaService : ConsultaApiService ){}
-  activo:boolean=false;
+  @Input() activo:boolean=false;
   pokemonBuscado?:Pokemon;
  errorMessage: string = "";
   public pokemonName:string="";
@@ -20,7 +21,6 @@ export class HeaderComponent {
   onClick(){
     this.consultaService.getPokemonByName(this.pokemonName).subscribe(data=>{
       this.pokemonBuscado=data
-      this.activo=true;
     }
       ,
       (error=> {if(error===404)

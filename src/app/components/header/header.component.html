@@ -6,7 +6,7 @@
         <img class="img-pok" src="../../../assets/pokeball-pokemon-catch-svgrepo-com.svg" alt="">
       </a>
     </div>
-    <div class="search-container">
+    <div class="search-container" *ngIf="activo">
           <input class="input" (input)="buscar($event)" type="text">
           <button type="submit" (click)="onClick()">
             <svg xmlns="http://www.w3.org/2000/svg" class="boton" viewBox="0 0 512 512">
@@ -16,7 +16,6 @@
       </div>
   </div>
 </nav>
-<!-- agregar transicion -->
 <div *ngIf="pokemonBuscado" ngClass="slide-bottom" class="bg-search">
   <a [routerLink]="['/pokemon-details',pokemonBuscado.id]" class="buscado-container contenedor">
     <p>
