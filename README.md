@@ -34,7 +34,7 @@ CÓMO USAR
 5) Abre tu navegador web y visita http://localhost:4200/ para ver la Pokédex en acción.
 
 
-TECNOLOÍAS UTILIZADAS
+TECNOLOGÍAS UTILIZADAS
 
 Angular: Utilicé el framework Angular para desarrollar la interfaz de usuario y gestionar los componentes de la aplicación.
 
