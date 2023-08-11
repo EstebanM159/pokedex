@@ -35,6 +35,7 @@ CÓMO USAR
 
 
 TECNOLOÍAS UTILIZADAS
+
 Angular: Utilicé el framework Angular para desarrollar la interfaz de usuario y gestionar los componentes de la aplicación.
 
 PokeAPI v2: La aplicación se conecta a la API de PokeAPI v2 para obtener los datos detallados de los Pokémon.
