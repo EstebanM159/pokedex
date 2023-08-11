@@ -17,7 +17,7 @@ CÓMO USAR
 
 1) Clona este repositorio a tu máquina local utilizando el siguiente comando:
 
-  git clone https://github.com/EstebanM159/pokemonApi
+  git clone https://github.com/EstebanM159/pokedex
 
 2) Navega a la carpeta del proyecto:
 
