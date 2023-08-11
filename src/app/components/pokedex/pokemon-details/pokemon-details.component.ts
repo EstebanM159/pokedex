@@ -21,7 +21,6 @@ export class PokemonDetailsComponent implements OnInit{
     this.id = this.rutaActiva.snapshot.params['id'];
     this.getById();
   }
-//muestra la id pero no los datos de la misma!!!!!!!!!!!!
   getById(){
     this.consultaServicio.getPokemonById(this.id).subscribe(info=>{
       console.log(info);
