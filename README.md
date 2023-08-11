@@ -1,27 +1,49 @@
-# Pokemon
+Proyecto Pokédex en Angular con PokeAPI v2
+Pokédex en Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+¡Bienvenidos al proyecto de Pokédex desarrollado en Angular utilizando la API de PokeAPI v2! En este proyecto emocionante, he creado una aplicación web que te permite explorar y descubrir información detallada sobre diferentes Pokémon de todas las generaciones.
 
-## Development server
+CARACTERíSTICAS
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+◉ Exploración de Pokémon: Navega a través de una amplia lista de Pokémon, ordenados por número o nombre. ¡Descubre incluso los Pokémon más raros y legendarios!
 
-## Code scaffolding
+◉ Detalles Completos: Haz clic en cualquier Pokémon para ver información detallada, incluyendo su imagen, tipo, habilidades y más.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+◉ Búsqueda Inteligente: Utiliza la función de búsqueda para encontrar rápidamente el Pokémon que estás buscando. La búsqueda es intuitiva y muestra resultados mientras escribes.
 
-## Build
+◉ Diseño Responsivo: La aplicación está diseñada para adaptarse a diferentes tamaños de pantalla, lo que significa que puedes explorar los Pokémon tanto en tu computadora de escritorio como en tu dispositivo móvil.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+CÓMO USAR
 
-## Running unit tests
+1) Clona este repositorio a tu máquina local utilizando el siguiente comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+git clone https://github.com/EstebanM159/pokedex-angular.git
 
-## Running end-to-end tests
+2) Navega a la carpeta del proyecto:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+cd pokedex-angular
 
-## Further help
+3) Instala las dependencias utilizando npm (asegúrate de tener Node.js y npm instalados):
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+npm install
+
+4) Inicia el servidor de desarrollo:
+
+ng serve
+
+5) Abre tu navegador web y visita http://localhost:4200/ para ver la Pokédex en acción.
+
+
+TECNOLOÍAS UTILIZADAS
+Angular: Utilicé el framework Angular para desarrollar la interfaz de usuario y gestionar los componentes de la aplicación.
+
+PokeAPI v2: La aplicación se conecta a la API de PokeAPI v2 para obtener los datos detallados de los Pokémon.
+
+CSS3: He aplicado estilos personalizados utilizando CSS3 para darle a la Pokédex su aspecto único y atractivo.
+
+Contribuciones
+¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar esta Pokédex o encuentras algún problema, siéntete libre de abrir un issue o enviar un pull request en este repositorio.
+
+Espero que disfrutes explorando y aprendiendo sobre los diversos Pokémon a través de esta Pokédex en Angular. ¡Atrapa 'em todos!
+
+Este proyecto fue creado por Esteban.
