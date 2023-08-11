@@ -17,19 +17,19 @@ CÓMO USAR
 
 1) Clona este repositorio a tu máquina local utilizando el siguiente comando:
 
-git clone https://github.com/EstebanM159/pokedex-angular.git
+  git clone https://github.com/EstebanM159/pokemonApi
 
 2) Navega a la carpeta del proyecto:
 
-cd pokedex-angular
+  cd pokedex-angular
 
 3) Instala las dependencias utilizando npm (asegúrate de tener Node.js y npm instalados):
 
-npm install
+  npm install
 
 4) Inicia el servidor de desarrollo:
 
-ng serve
+  ng serve
 
 5) Abre tu navegador web y visita http://localhost:4200/ para ver la Pokédex en acción.
 
