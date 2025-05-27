@@ -10,6 +10,8 @@ h1{
   align-items: center;
   background-color: var(--bgCards);
   border-radius: 2rem;
+  min-height:450px;
+  max-height:470px;
 }
 .card-pokemon img{
   width: 80%;
